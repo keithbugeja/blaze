@@ -1,11 +1,13 @@
-*************************************************************
-* Blaze.S 													*
-*************************************************************
-* DISCLAIMER: This source code is ancient and was written	*
-*	when I had very little programming experience! Please   *
-*	consider it an example of how things ought *NOT* to be 	*
-* 	done. 									-- Keith Bugeja	*
-*************************************************************
+*****************************************************************
+* Blaze.S 							*
+*****************************************************************
+* DISCLAIMER: 							*
+* 	This source code is ancient! 				*
+*	It was written when I had very little programming 	*
+*	experience; treat it as an example of how *not*	to	*
+*	do things!						*
+*							Keith	*
+*****************************************************************
 
  Section Blaze_Code			
  opt o+				
@@ -4374,7 +4376,7 @@ Pfrm1:
 	Move.w	#31,Yoff
 	Bra	Settle
 
-Pfrm2:					; 45° Left
+Pfrm2:					; 45Â° Left
 	Cmpi.b	#2,d2
 	Bne	Pfrm3
 
@@ -4391,7 +4393,7 @@ Pfrm2b:
 	Move.w	Xoff,Yoff
 	Bra	Settle
 
-Pfrm3:					; 45° Right
+Pfrm3:					; 45Â° Right
 	Cmpi.b	#3,d2
 	Bne	Pfrm4
 
@@ -4412,7 +4414,7 @@ Pfrm3b:
 	Bra	Settle
 
 Pfrm4:	
-	Cmpi.b	#4,d2		; 22° Left (1)
+	Cmpi.b	#4,d2		; 22Â° Left (1)
 	Bne	Pfrm5
 
 	Move.w	#1,FrDir
@@ -4424,7 +4426,7 @@ Pfrm4:
 	Move.w	d0,Yoff
 	Bra	Settle
 
-Pfrm5:					; 22° Left (2)
+Pfrm5:					; 22Â° Left (2)
 	Cmpi.b	#5,d2
 	Bne	Pfrm6
 
@@ -4444,7 +4446,7 @@ Pfrm5b:
 	Bra	Settle
 
 Pfrm6:	
-	Cmpi.b	#6,d2		; 22° Right(1)
+	Cmpi.b	#6,d2		; 22Â° Right(1)
 	Bne	Pfrm7
 
 	Tst.w	Standon
@@ -4466,7 +4468,7 @@ Pfrm6b:
 	Bra	Settle
 
 Pfrm7:	
-	Cmpi.b	#7,d2		; 22° Right(2)
+	Cmpi.b	#7,d2		; 22Â° Right(2)
 	Bne	Pfrm10
 
 	Move.w	#1,FrDir
@@ -4553,7 +4555,7 @@ Pfrm20:
 Pfrm21:
 
 Pfrm22:	
-	Cmpi.b	#22,d2		; 11° Left (1)
+	Cmpi.b	#22,d2		; 11Â° Left (1)
 	Bne	Pfrm23
 
 	Tst.w	Standon
@@ -4571,7 +4573,7 @@ Pfrm22b:
 	Move.w	d0,Yoff
 	Bra	Settle
 
-Pfrm23:					; 11° Left (2)
+Pfrm23:					; 11Â° Left (2)
 	Cmpi.b	#23,d2
 	Bne	Pfrm24
 
@@ -4591,7 +4593,7 @@ Pfrm23b:
 	Move.w	d0,Yoff
 	Bra	Settle
 
-Pfrm24:					; 11° Left (3)
+Pfrm24:					; 11Â° Left (3)
 	Cmpi.b	#24,d2
 	Bne	Pfrm25
 
@@ -4612,7 +4614,7 @@ Pfrm24b:
 
 	Bra	Settle
 
-Pfrm25:					; 11° Left (4)
+Pfrm25:					; 11Â° Left (4)
 	Cmpi.b	#25,d2
 	Bne	Pfrm26
 
@@ -4626,7 +4628,7 @@ Pfrm25:					; 11° Left (4)
 	Bra	Settle
 
 Pfrm26:	
-	Cmpi.b	#26,d2		; 11° Right (1)
+	Cmpi.b	#26,d2		; 11Â° Right (1)
 	Bne	Pfrm27
 
 	Tst.w	Standon
@@ -4646,7 +4648,7 @@ Pfrm26b:
 	Move.w	d0,Yoff
 	Bra	Settle
 
-Pfrm27:					; 11° Right (2)
+Pfrm27:					; 11Â° Right (2)
 	Cmpi.b	#27,d2
 	Bne	Pfrm28
 
@@ -4668,7 +4670,7 @@ Pfrm27b:
 	Move.w	d0,Yoff
 	Bra	Settle
 
-Pfrm28:					; 11° Right (3)
+Pfrm28:					; 11Â° Right (3)
 	Cmpi.b	#28,d2
 	Bne	Pfrm29
 
@@ -4692,7 +4694,7 @@ Pfrm28b:
 
 	Bra	Settle
 
-Pfrm29:					; 11° Right (4)
+Pfrm29:					; 11Â° Right (4)
 	Cmpi.b	#29,d2
 	Bne	Pfrm30
 
@@ -4708,7 +4710,7 @@ Pfrm29:					; 11° Right (4)
 	Bra	Settle
 
 Pfrm30:		
-	Cmpi.b	#30,d2		; 45° Curve Left (1)
+	Cmpi.b	#30,d2		; 45Â° Curve Left (1)
 	Bne	Pfrm31
 
 	Tst.w	Standon
@@ -4732,7 +4734,7 @@ Pfrm30b:
 	Bra	Settle
 
 Pfrm31:	
-	Cmpi.b	#31,d2		; 45° Curve Left (2)
+	Cmpi.b	#31,d2		; 45Â° Curve Left (2)
 	Bne	Pfrm32
 
 	Tst.w	Standon
@@ -4756,7 +4758,7 @@ Pfrm31b:
 	Bra	Settle
 
 Pfrm32:	
-	Cmpi.b	#32,d2		; 45° Curve Right (1)
+	Cmpi.b	#32,d2		; 45Â° Curve Right (1)
 	Bne	Pfrm33
 
 	Tst.w	Standon
@@ -4779,7 +4781,7 @@ Pfrm32b:
 	Bra	Settle
 
 Pfrm33:	
-	Cmpi.b	#33,d2		; 45° Curve Right (2)
+	Cmpi.b	#33,d2		; 45Â° Curve Right (2)
 	Bne	Pfrm34
 
 	Tst.w	Standon
@@ -4801,7 +4803,7 @@ Pfrm33b:
 	Bra	Settle
 
 Pfrm34:	
-	Cmpi.b	#34,d2		; 45° Curve Left (3)
+	Cmpi.b	#34,d2		; 45Â° Curve Left (3)
 	Bne	Pfrm35
 
 	Tst.w	Standon
@@ -4822,7 +4824,7 @@ Pfrm34b:
 	Bra	Settle
 
 Pfrm35:	
-	Cmpi.b	#35,d2		; 45° Curve Left (4)
+	Cmpi.b	#35,d2		; 45Â° Curve Left (4)
 	Bne	Pfrm36	
 
 	Tst.w	Standon
@@ -4842,7 +4844,7 @@ Pfrm35b:
 	Bra	Settle
 
 Pfrm36:	
-	Cmpi.b	#36,d2		; 45° Curve Right (3)
+	Cmpi.b	#36,d2		; 45Â° Curve Right (3)
 	Bne	Pfrm37	
 	
 	Tst.w	Standon
@@ -4864,7 +4866,7 @@ Pfrm36b:
 	Bra	Settle
 
 Pfrm37:	
-	Cmpi.b	#37,d2		; 45° Curve Right (4)
+	Cmpi.b	#37,d2		; 45Â° Curve Right (4)
 	Bne	Pfrm38
 
 	Tst.w	Standon
@@ -4886,7 +4888,7 @@ Pfrm37b:
 	Bra	Settle
 
 Pfrm38:	
-	Cmpi.b	#38,d2		; 22° Curve Left (1)
+	Cmpi.b	#38,d2		; 22Â° Curve Left (1)
 	Bne	Pfrm39
 	
 	Move.w	#1,FrDir
@@ -4903,7 +4905,7 @@ Pfrm38:
 	Bra	Settle
 
 Pfrm39:	
-	Cmpi.b	#39,d2		; 22° Curve Left (2)
+	Cmpi.b	#39,d2		; 22Â° Curve Left (2)
 	Bne	Pfrm40
 	
 	Move.w	#1,FrDir
@@ -4920,7 +4922,7 @@ Pfrm39:
 	Bra	Settle
 
 Pfrm40:	
-	Cmpi.b	#40,d2		; 22° Curve Right (1)
+	Cmpi.b	#40,d2		; 22Â° Curve Right (1)
 	Bne	Pfrm41
 	
 	Move.w	#1,FrDir
@@ -4936,7 +4938,7 @@ Pfrm40:
 	Bra	Settle
 
 Pfrm41:	
-	Cmpi.b	#41,d2		; 22° Curve Right (2)
+	Cmpi.b	#41,d2		; 22Â° Curve Right (2)
 	Bne	Pfrm42
 	
 	Move.w	#1,FrDir
@@ -4951,7 +4953,7 @@ Pfrm41:
 	Bra	Settle
 
 Pfrm42:	
-	Cmpi.b	#42,d2		; 22° Curve Left (3)
+	Cmpi.b	#42,d2		; 22Â° Curve Left (3)
 	Bne	Pfrm43
 
 	Tst.w	Standon
@@ -4972,7 +4974,7 @@ Pfrm42b:
 	Bra	Settle
 
 Pfrm43:	
-	Cmpi.b	#43,d2		; 22° Curve Left (4)
+	Cmpi.b	#43,d2		; 22Â° Curve Left (4)
 	Bne	Pfrm44
 	
 	Tst.w	Standon
@@ -4992,7 +4994,7 @@ Pfrm43b:
 	Bra	Settle
 
 Pfrm44:	
-	Cmpi.b	#44,d2		; 22° Curve Right (3)
+	Cmpi.b	#44,d2		; 22Â° Curve Right (3)
 	Bne	Pfrm45
 
 	Tst.w	Standon
@@ -5014,7 +5016,7 @@ Pfrm44b:
 	Bra	Settle
 
 Pfrm45:	
-	Cmpi.b	#45,d2		; 22° Curve Right (4)
+	Cmpi.b	#45,d2		; 22Â° Curve Right (4)
 	Bne	Pfrm46
 
 	Tst.w	Standon
